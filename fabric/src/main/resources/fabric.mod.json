@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "trowel",
+	"version": "${version}",
+	"name": "Trowel",
+	"description": "Adds a trowel that places random blocks from the hotbar.",
+	"authors": ["100tch"],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/100tch/trowel"
+	},
+	"license": "BSD 2-Clause",
+	"icon": "assets/trowel/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["stotch.trowel.fabric.TrowelFabric"],
+		"client": ["stotch.trowel.fabric.client.TrowelFabricClient"]
+	},
+	"mixins": ["trowel.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

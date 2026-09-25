@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+#issueTrackerURL = ""
+license = "BSD 2-Clause"
+
+[[mods]]
+modId = "trowel"
+version = "${version}"
+displayName = "Trowel"
+logoFile = "assets/trowel/icon.png"
+authors = "100tch"
+description = '''
+Adds a trowel that places random blocks from the hotbar.
+'''
+#logoFile = ""
+
+[[dependencies.trowel]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.trowel]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "trowel.mixins.json"

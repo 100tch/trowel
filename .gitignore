@@ -1,0 +1,6 @@
+.gradle
+build/
+**/build/
+**/bin/
+run/
+!gradle-wrapper.jar
