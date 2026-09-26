@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"id": "trowel:trowel"
+		},
+		"title": "Builder of the Future",
+		"description": "Use a trowel to place a block for the first time",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "minecraft:husbandry/root",
+	"criteria": {
+		"used_trowel": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "trowel:trowel"
+						}
+					}
+				]
+			}
+		}
+	}
+}

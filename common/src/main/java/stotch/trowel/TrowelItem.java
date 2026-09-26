@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import net.minecraft.ChatFormatting;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -83,6 +85,10 @@ public class TrowelItem extends Item {
 
 			InteractionResult result = blockStack.useOn(placementContext);
 			if (result.consumesAction()) {
+				if (player instanceof ServerPlayer serverPlayer) {
+					CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, targetPos, trowelStack);
+				}
+
 				if (!player.isCreative()) {
 					trowelStack.hurtAndBreak(
 						1,

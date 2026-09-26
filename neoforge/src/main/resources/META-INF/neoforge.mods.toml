@@ -12,7 +12,6 @@ authors = "100tch"
 description = '''
 Adds a trowel that places random blocks from the hotbar.
 '''
-#logoFile = ""
 
 [[dependencies.trowel]]
 modId = "neoforge"
